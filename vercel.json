@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "apps/tenant/package.json",
+      "use": "@vercel/next",
+      "config": {
+        "distDir": ".next"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "apps/tenant/$1"
+    }
+  ],
+  "functions": {
+    "apps/tenant/app/api/**/*.ts": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}
