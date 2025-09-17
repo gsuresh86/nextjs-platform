@@ -14,10 +14,5 @@
       "src": "/(.*)",
       "dest": "apps/tenant/$1"
     }
-  ],
-  "functions": {
-    "apps/tenant/app/api/**/*.ts": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  ]
 }
